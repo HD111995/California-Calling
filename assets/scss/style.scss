@@ -1,0 +1,330 @@
+//Functions
+@mixin animi($name, $time, $func) {
+  animation-name: $name;
+  animation-duration: $time;
+  animation-timing-function: $func;
+  animation-iteration-count: infinite;
+}
+@mixin flixi($justi, $align) {
+  display: flex;
+  justify-content: $justi;
+  align-items: $align;
+}
+//fonts
+@font-face {
+  font-family: lar;
+  src: url("../font/LarishNeueSemibold.woff");
+}
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+//variable
+$font: "Work Sans", sans-serif;
+//Rendering
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+}
+//global
+h2 {
+  font-size: 104px;
+}
+a,
+p {
+  font-family: $font;
+}
+h1,
+h2,
+h4,
+h5 {
+  font-family: lar;
+}
+a {
+  text-decoration-line: none;
+  font-size: 18px;
+}
+.act-2,
+.act-3,
+.act-4,
+.act-5,
+.act-6 {
+  width: 22vw;
+  height: 30vh;
+  display: block;
+}
+img {
+  width: 30vw;
+  height: 20vh;
+}
+a {
+  border: 1px solid white;
+  color: #fff;
+  padding: 15px 40px;
+  transition: all 0.6s;
+}
+a:hover {
+  background-color: #fff;
+  color: #000;
+}
+//global End point
+//Header Styling
+header {
+  text-align: center;
+  background-color: #000;
+  .line img {
+    width: 2vw;
+    height: 25vh;
+  }
+  .line {
+    margin-bottom: 5vh;
+  }
+  div p {
+    color: #fff;
+  }
+  div h1 {
+    width: 50vw;
+    margin: 2vh auto;
+    color: white;
+    font-size: 90px;
+    line-height: 70px;
+    span {
+      color: black;
+      -webkit-text-stroke: 1px #fff;
+    }
+  }
+  div:last-child {
+    margin-top: 22vh;
+    @include flixi(space-between, center);
+    padding: 0 7vw;
+    img {
+      width: 5vw;
+    }
+  }
+}
+//header End point
+//section info start point
+.info {
+  background: url("../img/map.svg") no-repeat;
+  background-size: 510px;
+  background-position: 1050px 900px;
+  background-color: #000;
+  padding: 20vh 7vw;
+  h2:first-child {
+    width: 65vw;
+    color: white;
+    margin-bottom: 20vh;
+  }
+  h2 {
+    color: #fff;
+  }
+  p {
+    color: white;
+    font-size: 20px;
+  }
+}
+//section info Endpoint
+//section show start point
+.show {
+  .act-1 {
+    width: 24vw;
+    height: 35vh;
+    transform: translate(68vw, -15vh);
+  }
+  .act-2 {
+    transform: translate(3vw, 4vh);
+  }
+  div {
+    width: 35vw;
+    margin: 0vh auto;
+    h2 {
+      line-height: 100px;
+    }
+    p {
+      width: 31vw;
+      line-height: 30px;
+      font-size: 18px;
+    }
+  }
+  .act-3 {
+    transform: translate(76.8vw, -6vh);
+  }
+  .act-4 {
+    transform: translate(17vw, -6vh);
+  }
+  .act-5 {
+    transform: translate(61.8vw, -10vh);
+  }
+  .para {
+    width: 30vw;
+    margin: 0 auto;
+    line-height: 30px;
+    transform: translatey(-23vh);
+  }
+  .act-7 {
+    width: 35vw;
+    height: 45vh;
+    transform: translate(46.8vw, 10vh);
+  }
+}
+//section show end point
+//Section bear Start Points
+.bear {
+  background-color: #000;
+  article:nth-child(1) {
+    @include flixi(space-between, center);
+    padding: 20vh 7vw;
+    div h5,
+    div h2,
+    div h4,
+    div p {
+      color: white;
+    }
+    p,
+    h5 {
+      font-size: 22px;
+    }
+    div:nth-child(2) {
+      padding-left: 20vw;
+      h4 {
+        font-size: 36px;
+        margin-bottom: 3vh;
+      }
+    }
+  }
+  article:last-child {
+    .gold-2 {
+      width: 30vw;
+      height: 35vw;
+      position: relative;
+      bottom: -10vh;
+    }
+    .gold {
+      width: 55vw;
+      height: 55vw;
+      transform: translate(7vw, 25vh);
+    }
+  }
+}
+//bear End Point
+//poppy start Point
+.poppy {
+  padding-bottom: 36vh;
+  .ani-1 {
+    width: 27vw;
+    height: 27vw;
+    position: relative;
+    left: 79vw;
+    top: -17vh;
+    @include animi(flep, 5s, linear);
+    @keyframes flep {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  article:first-of-type {
+    @include flixi(space-between, center);
+    padding: 5vh 7vw;
+    p,
+    h5 {
+      font-size: 22px;
+    }
+    div:nth-child(2) {
+      padding-left: 20vw;
+      h4 {
+        font-size: 36px;
+        margin-bottom: 3vh;
+      }
+    }
+  }
+  article:last-child {
+    .rose-2 {
+      width: 30vw;
+      height: 35vw;
+      position: relative;
+      bottom: -10vh;
+      right: 44vw;
+    }
+    .rose {
+      width: 55vw;
+      height: 55vw;
+      transform: translate(37vw, 25vh);
+    }
+  }
+}
+//poppy End Point
+//section last Start Point
+.last {
+  overflow: hidden;
+  background-color: #000;
+  color: white;
+  div:first-child {
+    width: 30vw;
+    padding: 22vh 7vw 5vh 7vw;
+    h4 {
+      margin: 5vh 0 8vh 0;
+      font-size: 32px;
+    }
+  }
+  .ani-2 {
+    background-color: #fff;
+    width: 200vw;
+    transform: rotate(40deg);
+    position: relative;
+    right: 22vw;
+    top: -37vh;
+
+    h3 {
+      color: black;
+      font-family: lar;
+      font-size: 94px;
+      @include animi(move, 4s, linear);
+      @keyframes move {
+        0% {
+          transform: translatex(70vw);
+        }
+        99% {
+          transform: translatex(0vw);
+        }
+      }
+      span {
+        color: white;
+        -webkit-text-stroke: 1px #000;
+      }
+    }
+  }
+  footer {
+    background-color: #000;
+    @include flixi(space-between, center);
+    padding: 0 7vw 6vh 7vw;
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 2vh;
+        p {
+          font-size: 22px;
+        }
+      }
+      li:first-child {
+        img {
+          width: 2vw;
+          height: 2vw;
+          margin-right: 4px;
+        }
+      }
+    }
+    div {
+      img {
+        width: 6vw;
+        height: 3vw;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+//section last End point
+//footer start Point
