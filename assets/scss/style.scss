@@ -270,7 +270,7 @@ header {
       font-size: 32px;
     }
   }
-  .ani-2 {
+  .ani_2 {
     background-color: #fff;
     width: 200vw;
     transform: rotate(40deg);
@@ -328,3 +328,20 @@ header {
 }
 //section last End point
 //footer start Point
+//Import Media Query
+@media only screen and (max-width: 1200px) {
+  .info {
+    background-size: 510px;
+    background-position: 700px 1400px;
+  }
+  .last {
+    .ani_2 {
+      width: 230vw;
+      right: 10vw;
+      top: -20vh;
+      h3 {
+        font-size: 80px;
+      }
+    }
+  }
+}

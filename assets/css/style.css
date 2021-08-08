@@ -260,7 +260,7 @@ header div:last-child img {
   margin: 5vh 0 8vh 0;
   font-size: 32px;
 }
-.last .ani-2 {
+.last .ani_2 {
   background-color: #fff;
   width: 200vw;
   transform: rotate(40deg);
@@ -268,7 +268,7 @@ header div:last-child img {
   right: 22vw;
   top: -37vh;
 }
-.last .ani-2 h3 {
+.last .ani_2 h3 {
   color: black;
   font-family: lar;
   font-size: 94px;
@@ -285,7 +285,7 @@ header div:last-child img {
     transform: translatex(0vw);
   }
 }
-.last .ani-2 h3 span {
+.last .ani_2 h3 span {
   color: white;
   -webkit-text-stroke: 1px #000;
 }
@@ -314,6 +314,22 @@ header div:last-child img {
   width: 6vw;
   height: 3vw;
   margin-right: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .info {
+    background-size: 510px;
+    background-position: 700px 1400px;
+  }
+
+  .last .ani_2 {
+    width: 230vw;
+    right: 10vw;
+    top: -20vh;
+  }
+  .last .ani_2 h3 {
+    font-size: 80px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
